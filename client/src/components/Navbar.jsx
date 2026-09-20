@@ -38,7 +38,7 @@ function Navbar() {
 
         {/* Desktop Navigation */}
         <nav className="navbar__links">
-          <a href="#home">Home</a>
+          <a href="#hero">Home</a>
           <a href="#projects">Projects</a>
           <a href="#services">Services</a>
           <a href="#about">About</a>

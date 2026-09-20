@@ -5,8 +5,12 @@ import Philosophy from './components/Philosophy';
 import Projects from './components/Projects';
 import Gallery from './components/Gallery';
 import About from './components/About';
+import Services from './components/Services';
 import Process from './components/Process';
 import Studio from './components/Studio';
+import Testimonials from './components/Testimonials';
+import Partners from './components/Partners';
+import Consultation from './components/Consultation';
 function App() {
   return (
     <>
@@ -17,8 +21,12 @@ function App() {
       <Projects />
       <Gallery />
       <About />
+      <Services />
       <Process />
       <Studio />
+      <Testimonials />
+      <Partners />
+      <Consultation />
 
       <section
         id="projects"

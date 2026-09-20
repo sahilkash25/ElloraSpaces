@@ -1,0 +1,268 @@
+.partners {
+  position: relative;
+  padding: 160px 0 100px;
+  background: var(--navy-surface);
+  overflow: hidden;
+}
+
+.partners__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.partners__line {
+  margin-top: 24px;
+}
+
+.partners__number {
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+
+.partners__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+  gap: 80px;
+  align-items: end;
+
+  margin-left: clamp(0px, 8vw, 130px);
+  margin-bottom: 120px;
+}
+
+.partners__intro h2 {
+  color: var(--ivory);
+  font-size: clamp(70px, 10vw, 150px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.8;
+}
+
+.partners__intro h2 span {
+  display: block;
+  padding-left: clamp(35px, 8vw, 120px);
+  color: var(--gold);
+  font-style: italic;
+}
+
+.partners__intro p {
+  max-width: 370px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.partners__list {
+  margin-left: clamp(0px, 4vw, 65px);
+}
+
+.partner {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 80px minmax(280px, 1fr) minmax(260px, 0.7fr);
+
+  align-items: center;
+
+  min-height: 175px;
+  padding: 35px 0;
+
+  transition: padding 500ms ease;
+}
+
+.partner:hover {
+  padding-left: 20px;
+}
+
+.partner__number {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.partner__name h3 {
+  color: var(--ivory);
+  font-size: clamp(38px, 4.8vw, 68px);
+  font-weight: 400;
+  line-height: 0.9;
+
+  transition:
+    transform 500ms ease,
+    color 400ms ease;
+}
+
+.partner:hover .partner__name h3 {
+  color: var(--gold);
+  transform: translateX(10px);
+}
+
+.partner__description {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.partner__description p {
+  max-width: 300px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+
+  transition: color 400ms ease;
+}
+
+.partner:hover .partner__description p {
+  color: var(--ivory);
+}
+
+.partner__arrow {
+  flex-shrink: 0;
+
+  color: var(--gold);
+  font-size: 22px;
+
+  transform: translate(-5px, 5px);
+
+  transition:
+    transform 450ms ease,
+    color 350ms ease;
+}
+
+.partner:hover .partner__arrow {
+  color: var(--gold-light);
+  transform: translate(0, 0);
+}
+
+.partner__line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: rgba(201, 162, 75, 0.2);
+
+  transform-origin: left;
+
+  transition:
+    transform 600ms ease,
+    background 400ms ease;
+}
+
+.partner:hover .partner__line {
+  background: var(--gold);
+  transform: scaleX(1.02);
+}
+
+.partners__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 70px;
+  padding-left: clamp(0px, 4vw, 65px);
+
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .partners {
+    padding: 110px 0 80px;
+  }
+
+  .partners__header {
+    margin-bottom: 75px;
+  }
+
+  .partners__intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    margin-left: 0;
+    margin-bottom: 80px;
+  }
+
+  .partners__intro h2 {
+    font-size: clamp(65px, 14vw, 100px);
+  }
+
+  .partners__intro p {
+    margin-left: 30px;
+  }
+
+  .partners__list {
+    margin-left: 0;
+  }
+
+  .partner {
+    grid-template-columns: 55px 1fr;
+    gap: 20px;
+
+    min-height: 155px;
+  }
+
+  .partner__description {
+    grid-column: 2;
+    margin-top: 15px;
+  }
+
+  .partner:hover {
+    padding-left: 8px;
+  }
+
+  .partners__footer {
+    padding-left: 0;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .partners {
+    padding: 90px 0 65px;
+  }
+
+  .partners__number {
+    display: none;
+  }
+
+  .partners__intro h2 {
+    font-size: 60px;
+  }
+
+  .partner {
+    grid-template-columns: 38px 1fr;
+    padding: 28px 0;
+  }
+
+  .partner__name h3 {
+    font-size: 40px;
+  }
+
+  .partner__description {
+    gap: 15px;
+  }
+
+  .partner__description p {
+    font-size: 11px;
+  }
+
+  .partner__arrow {
+    font-size: 18px;
+  }
+
+  .partners__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
