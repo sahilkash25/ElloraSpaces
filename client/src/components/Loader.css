@@ -1,0 +1,68 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--navy);
+  color: var(--ivory);
+}
+
+.loader__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loader__brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(48px, 7vw, 82px);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--ivory);
+}
+
+.loader__line {
+  width: min(180px, 40vw);
+  height: 1px;
+  margin-top: 14px;
+
+  background: var(--gold);
+  transform-origin: center;
+}
+
+.loader__text {
+  margin-top: 18px;
+
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+
+  color: var(--gold);
+}
+
+.loader__year {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .loader__brand {
+    font-size: 52px;
+  }
+
+  .loader__text {
+    font-size: 9px;
+    letter-spacing: 0.28em;
+  }
+}

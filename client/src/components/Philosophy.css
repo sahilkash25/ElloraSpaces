@@ -1,0 +1,256 @@
+.philosophy {
+  position: relative;
+  padding: 160px 0;
+  background: var(--navy-surface);
+  overflow: hidden;
+}
+
+.philosophy::after {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 18%;
+
+  width: 1px;
+  height: 100%;
+
+  background: rgba(201, 162, 75, 0.07);
+
+  pointer-events: none;
+}
+
+.philosophy__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 110px;
+}
+
+.philosophy__line {
+  margin-top: 24px;
+}
+
+.philosophy__number {
+  color: var(--muted);
+
+  font-size: 9px;
+  letter-spacing: 0.2em;
+}
+
+.philosophy__heading {
+  max-width: 1050px;
+
+  margin-left: clamp(0px, 6vw, 95px);
+}
+
+.philosophy__heading h2 {
+  color: var(--ivory);
+
+  font-size: clamp(58px, 8vw, 122px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+}
+
+.philosophy__heading h2 span {
+  display: block;
+
+  padding-left: clamp(25px, 8vw, 125px);
+
+  color: var(--gold);
+  font-style: italic;
+}
+
+.philosophy__principles {
+  margin-top: 130px;
+  margin-left: clamp(0px, 10vw, 150px);
+}
+
+.principle {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 70px minmax(250px, 1fr) 40px;
+
+  align-items: center;
+
+  min-height: 150px;
+
+  padding: 35px 0;
+
+  transition: padding 450ms ease;
+}
+
+.principle:hover {
+  padding-left: 18px;
+}
+
+.principle__number {
+  align-self: flex-start;
+
+  padding-top: 8px;
+
+  color: var(--gold);
+
+  font-size: 9px;
+  letter-spacing: 0.18em;
+}
+
+.principle__content h3 {
+  margin-bottom: 12px;
+
+  color: var(--ivory);
+
+  font-size: clamp(38px, 4vw, 58px);
+  font-weight: 400;
+
+  transition:
+    color 350ms ease,
+    transform 450ms ease;
+}
+
+.principle:hover .principle__content h3 {
+  color: var(--gold);
+  transform: translateX(8px);
+}
+
+.principle__content p {
+  max-width: 500px;
+
+  color: var(--muted);
+
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.principle__arrow {
+  justify-self: end;
+
+  color: var(--gold);
+
+  font-size: 21px;
+
+  opacity: 0.5;
+
+  transition:
+    opacity 350ms ease,
+    transform 450ms ease;
+}
+
+.principle:hover .principle__arrow {
+  opacity: 1;
+  transform: translate(4px, -4px);
+}
+
+.principle__line {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 1px;
+
+  background: rgba(201, 162, 75, 0.18);
+
+  transform-origin: left;
+
+  transition:
+    background 400ms ease,
+    transform 500ms ease;
+}
+
+.principle:hover .principle__line {
+  background: var(--gold);
+  transform: scaleX(1.01);
+}
+
+.philosophy__footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 110px;
+  margin-left: clamp(0px, 10vw, 150px);
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(201, 162, 75, 0.18);
+
+  color: var(--muted);
+
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 850px) {
+  .philosophy {
+    padding: 110px 0;
+  }
+
+  .philosophy__top {
+    margin-bottom: 75px;
+  }
+
+  .philosophy__heading {
+    margin-left: 0;
+  }
+
+  .philosophy__heading h2 {
+    font-size: clamp(54px, 14vw, 86px);
+  }
+
+  .philosophy__principles {
+    margin-top: 90px;
+    margin-left: 0;
+  }
+
+  .principle {
+    grid-template-columns: 50px 1fr 30px;
+  }
+
+  .philosophy__footer {
+    margin-left: 0;
+    margin-top: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .philosophy {
+    padding: 90px 0;
+  }
+
+  .philosophy__number {
+    display: none;
+  }
+
+  .philosophy__heading h2 {
+    font-size: 53px;
+  }
+
+  .philosophy__heading h2 span {
+    padding-left: 20px;
+  }
+
+  .principle {
+    grid-template-columns: 35px 1fr 20px;
+
+    min-height: 135px;
+    padding: 28px 0;
+  }
+
+  .principle__content h3 {
+    font-size: 38px;
+  }
+
+  .principle__content p {
+    font-size: 11px;
+  }
+
+  .philosophy__footer {
+    flex-wrap: wrap;
+    gap: 15px 25px;
+  }
+}

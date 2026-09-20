@@ -1,0 +1,10 @@
+.interior-scene {
+  width: 100%;
+  height: 100%;
+}
+
+.interior-scene canvas {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
