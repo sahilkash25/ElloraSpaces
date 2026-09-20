@@ -5,6 +5,8 @@ import Philosophy from './components/Philosophy';
 import Projects from './components/Projects';
 import Gallery from './components/Gallery';
 import About from './components/About';
+import Process from './components/Process';
+import Studio from './components/Studio';
 function App() {
   return (
     <>
@@ -15,6 +17,8 @@ function App() {
       <Projects />
       <Gallery />
       <About />
+      <Process />
+      <Studio />
 
       <section
         id="projects"

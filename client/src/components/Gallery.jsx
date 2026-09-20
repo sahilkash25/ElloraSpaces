@@ -6,25 +6,25 @@ const galleryItems = [
     number: '01',
     title: 'Quiet Luxury',
     category: 'Living',
-    image: '/images/projects/project-1.jpg',
+    image: `${import.meta.env.BASE_URL}images/projects/project-1.jpg`,
   },
   {
     number: '02',
     title: 'Material & Form',
     category: 'Architecture',
-    image: '/images/projects/project-2.jpg',
+    image: `${import.meta.env.BASE_URL}images/projects/project-2.jpg`,
   },
   {
     number: '03',
     title: 'The Warmth Within',
     category: 'Bedroom',
-    image: '/images/projects/project-3.jpg',
+    image: `${import.meta.env.BASE_URL}images/projects/project-3.jpg`,
   },
   {
     number: '04',
     title: 'Light & Shadow',
-    category: 'Bathroom',
-    image: '/images/projects/bathroom.webp',
+    category: 'Atmosphere',
+    image: `${import.meta.env.BASE_URL}images/projects/bathroom.webp`,
   },
 ];
 

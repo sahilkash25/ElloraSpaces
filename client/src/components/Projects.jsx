@@ -8,21 +8,21 @@ const projects = [
     title: 'The Ivory Residence',
     category: 'Residential Interior',
     location: 'Patna, India',
-    image: '/images/projects/project-1.jpg',
+    image: `${import.meta.env.BASE_URL}images/projects/project-1.jpg`,
   },
   {
     number: '02',
     title: 'The Grand Residence',
     category: 'Luxury Interior',
     location: 'New Delhi, India',
-    image: '/images/projects/project-2.jpg',
+    image: `${import.meta.env.BASE_URL}images/projects/project-2.jpg`,
   },
   {
     number: '03',
     title: 'Modern Heritage',
     category: 'Contemporary Interior',
     location: 'Mumbai, India',
-    image: '/images/projects/project-3.jpg',
+    image: `${import.meta.env.BASE_URL}images/projects/project-3.jpg`,
   },
 ];
 
